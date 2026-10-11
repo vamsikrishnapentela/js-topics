@@ -1,0 +1,10 @@
+Why we use try and catch:
+Sometimes your code might throw an error (like dividing by zero, accessing undefined variables, etc.).
+If you don’t handle it, the program stops running.
+With try...catch, you can catch that error and handle it without crashing your program.
+
+try {
+    // Code that might throw an error
+} catch (error) {
+    // Code that runs if an error happens
+}

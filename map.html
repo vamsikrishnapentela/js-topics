@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Higher-Order Functions Example</title>
+</head>
+<body>
+  <h2>✅ Higher-Order Functions Demo</h2>
+  <p>Check the console (F12 → Console)</p>
+
+<script>
+  // Array of product prices
+  let prices = [100, 200, 300, 400];
+
+  // map() is a higher-order function (it takes another function as argument)
+  let discountedPrices = prices.map(function(price) {
+    return price - price * 0.1; // 10% discount
+  });
+
+  console.log("Original Prices:", prices);
+  console.log("Discounted Prices:", discountedPrices);
+</script>
+</body>
+</html>

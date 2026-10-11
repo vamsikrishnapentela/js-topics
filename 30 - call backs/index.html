@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+      function hello(callback){
+        console.log("hello");
+        callback();
+      }
+
+       function wait(){
+        console.log("wait");
+      }
+
+       function goo(){
+        console.log("go");
+      }
+      hello(wait);
+  </script>
+</body>
+</html>
+<!-- more ex in notes ai4n= notes written-->

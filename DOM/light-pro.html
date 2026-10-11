@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Light/Dark Mode Toggle</title>
+  <style>
+    /* Default Light Mode */
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: white;
+      color: black;
+      transition: background-color 0.5s ease, color 0.5s ease;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      border: none;
+      font-size: 18px;
+      cursor: pointer;
+      border-radius: 10px;
+    }
+    .dark-mode {
+      background-color: #121212;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🌗 Light/Dark Mode Toggle</h1>
+  <p>Click the button to switch modes!</p>
+
+  <button id="toggleBtn">Switch to Dark Mode 🌙</button>
+
+<script>
+    // 1️⃣ Grab button and body
+let button = document.getElementById("toggleBtn");
+let body = document.body;
+
+// 2️⃣ Add click event to toggle mode
+button.addEventListener("click", function() {
+  
+  // Toggle the "dark-mode" class on body
+  body.classList.toggle("dark-mode");
+  
+  // Change button text based on mode
+  if (body.classList.contains("dark-mode")) {
+    button.innerText = "Switch to Light Mode ☀️";
+  } else {
+    button.innerText = "Switch to Dark Mode 🌙";
+  }
+});
+
+</script>
+</body>
+</html>

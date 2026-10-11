@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log("Before error");
+
+try {
+    let num = 5;
+    console.log(num.toUpperCase()); // ❌ This will cause an error
+} catch (error) {
+    console.log("Oops! Something went wrong:", error.message);
+}
+
+console.log("After error"); // ✅ This runs
+
+    </script>
+</body>
+</html>

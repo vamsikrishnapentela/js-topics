@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <h1>Temperature conversion</h1>
+        <input type="number" id="textbox" value="0">
+
+        <br> <br>
+        <input type="radio" id="infah" name="unit">
+        <label for="infah">clesius => fahrenheit</label>
+        <br>
+        <input type="radio" id="incls" name="unit">
+        <label for="incls">fahrenheit  => clesius</label>
+        <br>
+        <button type="button" onclick="conert()">submit</button>
+        <p id="result">select a unit</p>
+    </form>
+
+    <script>
+         const textbox = document.getElementById("textbox");
+        const infah = document.getElementById("infah");
+        const incls = document.getElementById("incls");
+        const result = document.getElementById("result");
+        let temp;
+        
+        function conert(){
+            if(infah.checked){
+                temp=Number(textbox.value);
+                temp=temp *9/5 +32;
+                result.textContent=temp+"F";    
+            }
+            else if(incls.checked){
+                temp=Number(textbox.value);
+                temp=(temp-32) *(5/9);
+                result.textContent=temp+"C"; 
+            }
+            else{
+                result.textContent="select any unit"; 
+            }
+        }
+    </script>
+</body>
+</html>

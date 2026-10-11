@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Step 4 - Events</title>
+</head>
+<body>
+
+  <h1 id="message">Click the button 👇</h1>
+  <button id="btn">Click Me</button>
+
+<script>
+  let btn = document.getElementById("btn");
+  let msg = document.getElementById("message");
+
+  // ✅ Add event listener
+  btn.addEventListener("click", function(){
+    msg.innerText = "Button Clicked ✅";
+    msg.style.color = "green";
+  });
+</script>
+
+</body>
+</html>

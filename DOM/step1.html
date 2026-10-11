@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Step 1 - Access DOM Elements</title>
+</head>
+<body>
+
+  <h1 id="title">Hello DOM</h1>
+  <p class="info">This is paragraph 1</p>
+  <p class="info">This is paragraph 2</p>
+  <button id="checkBtn">Check Console</button>
+
+<script>
+  // 1️⃣ Accessing by ID
+  let title = document.getElementById("title");
+
+  // 2️⃣ Accessing by class (returns collection)
+  let paragraphs = document.getElementsByClassName("info");
+
+  // 3️⃣ Accessing by tag
+  let allParagraphs = document.getElementsByTagName("p");
+
+  // 4️⃣ Using querySelector (first match)
+  let firstPara = document.querySelector(".info");
+
+  // 5️⃣ Using querySelectorAll (all matches)
+  let allParas = document.querySelectorAll(".info");
+
+  // When button clicked → check all in console
+  document.getElementById("checkBtn").addEventListener("click", function() {
+    console.log("Title:", title);
+    console.log("Paragraphs:", paragraphs);
+    console.log("All Paragraphs:", allParagraphs);
+    console.log("First Para:", firstPara.innerText);
+    console.log("All Paras (NodeList):", allParas);
+  });
+</script>
+
+</body>
+</html>

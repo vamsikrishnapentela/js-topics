@@ -1,0 +1,21 @@
+#labelcount{
+    display: block;
+    text-align: center;
+    font-size: 10em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#container{
+    
+    text-align: center;
+}
+.button{
+    padding: 10px;
+    color: white;
+    background-color: rgb(116, 116, 232);
+    cursor: pointer;
+}
+
+.button:hover{
+    background-color: rgb(56, 56, 226);
+}

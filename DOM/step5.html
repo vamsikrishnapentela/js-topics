@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Step 5 - Create & Remove Elements</title>
+</head>
+<body>
+
+  <ul id="list">
+    <li>Item 1</li>
+  </ul>
+
+  <button onclick="addItem()">Add Item</button>
+  <button onclick="removeItem()">Remove Last Item</button>
+
+<script>
+  function addItem() {
+    let newItem = document.createElement("li");
+    newItem.innerText = "New Item";
+    document.getElementById("list").appendChild(newItem);
+  }
+
+  function removeItem() {
+    let list = document.getElementById("list");
+    if (list.lastChild) {
+      list.lastChild.remove();
+    }
+  }
+</script>
+
+</body>
+</html>

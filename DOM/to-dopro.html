@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To‑Do List App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      text-align: center;
+      padding: 30px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    input {
+      padding: 10px;
+      width: 250px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      padding: 10px 15px;
+      margin-left: 5px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin-top: 20px;
+    }
+
+    li {
+      background: white;
+      padding: 10px;
+      margin: 5px auto;
+      width: 300px;
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .deleteBtn {
+      background-color: red;
+      border: none;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>✅ To‑Do List</h1>
+
+  <!-- Input for task -->
+  <input type="text" id="taskInput" placeholder="Enter a task">
+  <button id="addBtn">Add Task</button>
+
+  <!-- List to hold tasks -->
+  <ul id="taskList"></ul>
+
+  <script> 
+    // 1️⃣ Grab elements
+let input = document.getElementById("taskInput");
+let addBtn = document.getElementById("addBtn");
+let taskList = document.getElementById("taskList");
+
+// 2️⃣ Add event when user clicks "Add Task"
+addBtn.addEventListener("click", function() {
+    let taskText = input.value.trim(); // remove extra spaces
+
+    if (taskText === "") {
+        alert("Please enter a task!");
+        return;
+    }
+
+    // 3️⃣ Create a new <li> for the task
+    let li = document.createElement("li");
+    li.innerText = taskText;
+
+    // 4️⃣ Create Delete Button
+    let deleteBtn = document.createElement("button");
+    deleteBtn.innerText = "Delete";
+    deleteBtn.classList.add("deleteBtn");
+
+    // 5️⃣ Delete task when delete button is clicked
+    deleteBtn.addEventListener("click", function() {
+        li.remove();
+    });
+
+    // 6️⃣ Add delete button to the li
+    li.appendChild(deleteBtn);
+
+    // 7️⃣ Add li to ul
+    taskList.appendChild(li);
+
+    // 8️⃣ Clear input after adding
+    input.value = "";
+});
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Step 2 - Change Content</title>
+</head>
+<body>
+
+  <h1 id="heading">Original Heading</h1>
+  <button onclick="changeText()">Change Text</button>
+  <button onclick="changeHTML()">Change with HTML</button>
+
+<script>
+  function changeText() {
+    document.getElementById("heading").innerText = "New Simple Text ✅";
+  }
+
+  function changeHTML() {
+    document.getElementById("heading").innerHTML = "<span style='color:red;'>Styled HTML Text ❤️</span>";
+  }
+</script>
+
+</body>
+</html>

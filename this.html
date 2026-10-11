@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>this Keyword Example</title>
+</head>
+<body>
+  <h2>✅ The "this" Keyword Demo</h2>
+  <button onclick="person.sayName()">Show Name</button>
+  <p id="output"></p>
+
+<script>
+  let person = {
+    name: "Vamsi",
+    sayName: function() {
+      // "this" refers to the object (person)
+      document.getElementById("output").innerText = "My name is " + this.name;
+    }
+  };
+</script>
+</body>
+</html>
